@@ -1,5 +1,5 @@
 $(function(){
-
+  // eventi
   $('.prev').click(
     function(){
       prevImg();
@@ -11,15 +11,46 @@ $(function(){
   function() {
     nextImg();
     nextBullet();
+
   });
 
+  $(document).keydown(
+    function(event){
+      if (event.keyCode == 39) {
+        nextImg();
+        nextBullet();
+      }
+
+      if (event.keyCode == 37){
+        prevImg();
+        prevBullet();
+      }
+
+    }
+  );
+
+  // $(document).keypress(
+  //   function(event){
+  //     // nextImg();
+  //     // nextBullet();
+  //       console.log(event.keyCode);
+  //   }
+  // );
+
+  $('.nav .fas.fa-circle').click(
+    function(){
+      if (button.hasClass('active')) {
+        button.removeClass('active')
+      } else {
+        $(this).addClass('active');
+      }
+    });
 
 
 
 
 
-
-// creo delle funzioni per fare le stesse cose
+// creo delle funzioni per far funzionare gli eventi
 
 function nextImg () {
   var imgActive = $('.images img.active')
@@ -30,7 +61,6 @@ function nextImg () {
     imgActive.next().addClass('active');
   }
 };
-
 function prevImg() {
   // scorrimento immagini all'indietro
   var imgActive = $('.images img.active')
