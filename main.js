@@ -28,6 +28,14 @@ $(function(){
       }
     }
   );
+  // swipe mobile
+  $('.images').on("swipeleft", nextImg);
+  $('.images').on("swipeleft", nextBullet);
+  $('.images').on("swiperight", prevImg);
+  $('.images').on("swiperight", prevBullet);
+
+  // $(".slider-wrapper").on("swipeleft", nextImg(){});
+
 
 // cliccando sul bullet questo e l'img corrispondente diventano active
   var clickBullet = $(".nav .fas.fa-circle");
@@ -85,4 +93,8 @@ $(function(){
       bulletActive.prev().addClass('active');
     }
   }
+  function newFunction(imgAndBullet) {
+    console.log(imgAndBullet);
+  }
+
 });
