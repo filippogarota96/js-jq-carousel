@@ -63,20 +63,3 @@ h1 {
   border: 1px  solid black;
 
 }
-/* responsive */
-@media only screen and (max-device-width: 760px) {
-
-  .container {
-    width: 100%;
-  }
-   .slider-wrapper .images {
-    text-align: center;
-  }
-  .prev, .next {
-    display: none;
-  }
-
-  .nav {
-    display: none;
-  }
-}

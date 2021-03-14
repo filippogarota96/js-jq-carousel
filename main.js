@@ -56,10 +56,11 @@ $(function(){
     var imgActive = $('.images img.active');
     imgActive.removeClass('active');
     if (imgActive.hasClass('last') == true) {
-      $('.images img.first').addClass('active');
+      $('.images img.first').addClass('active').animate({left: 0});
     } else {
-      imgActive.next().addClass('active');
+      imgActive.next().addClass('active').animate({left: 0});
     }
+
   };
   function prevImg() {
     // scorrimento immagini all'indietro
